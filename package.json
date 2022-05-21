@@ -25,6 +25,7 @@
     "jest-environment-jsdom-global": "3.0.0",
     "jest-location-mock": "1.0.9",
     "jest-mock-console": "^1.2.3",
+    "jest-transform-stub": "2.0.0",
     "less": "4.1.2",
     "less-loader": "10.2.0",
     "style-loader": "3.3.1",
