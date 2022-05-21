@@ -3,8 +3,11 @@
  * https://jestjs.io/docs/configuration
  */
 
+
 export default {
   preset: 'ts-jest',
+  moduleDirectories: ["node_modules", "src"],
+  // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
