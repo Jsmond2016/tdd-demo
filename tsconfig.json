@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
