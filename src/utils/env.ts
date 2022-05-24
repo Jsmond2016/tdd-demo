@@ -14,3 +14,5 @@ export const configObj = {
     return 'test';
   }
 }
+
+export const getEnv = () => 'test'
