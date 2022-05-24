@@ -4,3 +4,13 @@ export const config = {
     return 'test'
   }
 }
+
+export const config1 = {
+  env: 'test'
+}
+
+export const configObj = {
+  get env() {
+    return 'test';
+  }
+}
