@@ -1,18 +1,23 @@
 import * as envUtils from 'utils/env';
 
+const originEnv = envUtils.env;
+
 describe("env", () => {
-  it('开发环境', () => {
-    // 测试不通过，因为无法监听  getter ，因为 envUtils 里面的 env 是变量不是对象
+  afterEach(() => {
     // @ts-ignore
-    jest.spyOn(envUtils, 'env', 'get').mockReturnValue('dev')
+    envUtils.env = originEnv;
+  })
+  
+  it('开发环境', () => {
+    // @ts-ignore
+    envUtils.env = 'dev'
 
     expect(envUtils.env).toEqual('dev');
   })
 
   it('正式环境', () => {
-    // 测试不通过，因为无法监听  getter ，因为 envUtils 里面的 env 是变量不是对象
     // @ts-ignore
-    jest.spyOn(envUtils, 'env', 'get').mockReturnValue('prod')
+    envUtils.env = 'prod'
 
     expect(envUtils.env).toEqual('prod');
   })
