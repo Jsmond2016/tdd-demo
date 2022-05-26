@@ -22,3 +22,4 @@
 很多未知的内容需要补课，盲点知识补充：
 
 - @testing-library/react 中的 act 是什么，怎么用？[api/#act](https://testing-library.com/docs/preact-testing-library/api/#act), [react-act-examples](https://github.com/threepointone/react-act-examples/blob/master/sync.md)
+- renderHook 是什么，怎么用，为什么要用？ 看这里 [react-hooks-testing-library](https://github.com/testing-library/react-hooks-testing-library)
