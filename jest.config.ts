@@ -3,13 +3,16 @@
  * https://jestjs.io/docs/configuration
  */
 
-
 export default {
-  preset: 'ts-jest',
+  // 开启 1- (cpu.length -1) 个线程来执行测试用例，理论上，测试数量不多的情况下单线程就足够了
+  // 区别：多核 cpu 处理，速度更快，更改下面配置的数字试试看
+  maxWorkers: 4,
+  preset: "ts-jest",
   moduleDirectories: ["node_modules", "src"],
   // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
-  "moduleNameMapper": {
-    "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+  moduleNameMapper: {
+    "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
+      "jest-transform-stub",
   },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -135,7 +138,7 @@ export default {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ['./tests/jest-setup.ts'],
+  setupFilesAfterEnv: ["./tests/jest-setup.ts"],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
