@@ -6,8 +6,9 @@
 export default {
   // 开启 1- (cpu.length -1) 个线程来执行测试用例，理论上，测试数量不多的情况下单线程就足够了
   // 区别：多核 cpu 处理，速度更快，更改下面配置的数字试试看
-  maxWorkers: 4,
-  preset: "ts-jest",
+  // maxWorkers: 4,
+  // 不用 ts-jest
+  // preset: "ts-jest",
   moduleDirectories: ["node_modules", "src"],
   // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   moduleNameMapper: {
@@ -183,9 +184,10 @@ export default {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // transform: {
-  //   ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
-  // },
+  transform: {
+    // 使用 swc 转译 JavaScript 和 TypeScrit
+    "^.+\\.(t|j)sx?$": ["@swc/jest"],
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
