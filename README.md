@@ -22,3 +22,10 @@
 - 什么是 swc？简单理解和 babel 功能相似，特点是：快！超级快！
   - [swc初体验](https://zhuanlan.zhihu.com/p/437529362)
   - [swc 很好，也还不够好](https://zhuanlan.zhihu.com/p/386730674)
+
+
+## 练习项目
+
+- [jest-study](https://github.com/Jsmond2016/jest-study)
+- [jest-react](https://github.com/Jsmond2016/jest-react)
+- [jest-vue]() 待开始
